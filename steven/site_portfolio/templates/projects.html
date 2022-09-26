@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script> 
+    <script src="{% static 'js/script.js' %}"></script>
+    <title>Мои проекты</title>
+</head>
+<body>
+    <header>
+        <ul class="menu-bar">
+            <li><a  class="text-decoration-none" href="{% url 'home' %}">Главная</a></li>
+            <li><a  class="text-decoration-none" href="{% url 'projects' %}">Мои проекты</a></li>
+            <li><a  class="text-decoration-none" href="{% url 'contacts' %}">Связаться со мной</a></li>
+        </ul>
+    </header>
+    
+    <menu class="main-menu"></menu>
+    <main> 
+        <div class="contacts">
+            <h1>Проекты разработанные мной или с моим участием</h1>
+
+
+        </div>
+    </main>
+    <footer>
+        <div class="link"><a href="https://www.fl.ru/users/stepbash124">Профиль на Fl.ru</a></div>
+        <div class="link"><a href="https://vk.com/iisus_hristosss">Вконтакте</a></div>
+        <div class="link"> <a href="https://t.me/solanaethmint">Телеграм</a></div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script> 
+    <script src="{% static 'js/script.js' %}"></script>
+    <title>Контакты</title>
+</head>
+<body>
+    <header>
+        <ul class="menu-bar">
+            <li><a  class="text-decoration-none" href="{% url 'home' %}">Главная</a></li>
+            <li><a  class="text-decoration-none" href="{% url 'projects' %}">Мои проекты</a></li>
+            <li><a  class="text-decoration-none" href="{% url 'contacts' %}">Связаться со мной</a></li>
+        </ul>
+    </header>
+    
+    <menu class="main-menu"></menu>
+    <main> 
+        <div class="contacts">
+            <h1>Связаться со мной</h1>
+            <div class="inner contact">
+                <!-- Form Area -->
+                <div class="contact-form">
+                    <!-- Form -->
+                    <form id="contact-us" method="post" action="#">
+                        {% csrf_token %}
+                        <!-- Left Inputs -->
+                        <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+                            <!-- Name -->
+                            <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
+                            <!-- Email -->
+                            <input type="text" name="mail" id="mail" required="required" class="form" placeholder="Telegram" />
+                            <!-- Subject -->
+                            <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
+                        </div><!-- End Left Inputs -->
+                        <!-- Right Inputs -->
+                        <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+                            <!-- Message -->
+                            <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
+                        </div><!-- End Right Inputs -->
+                        <!-- Bottom Submit -->
+                        <div class="relative fullwidth col-xs-12">
+                            <!-- Send Button -->
+                            <button type="submit" id="submit" name="submit" class="form-btn semibold">Send Message</button> 
+                        </div><!-- End Bottom Submit -->
+                        <!-- Clear -->
+                        <div class="clear"></div>
+                    </form>
+
+                </div><!-- End Contact Form Area -->
+            </div><!-- End Inner -->
+
+        </div>
+    </main>
+    <footer>
+        <div class="link"><a href="https://www.fl.ru/users/stepbash124">Профиль на Fl.ru</a></div>
+        <div class="link"><a href="https://vk.com/iisus_hristosss">Вконтакте</a></div>
+        <div class="link"> <a href="https://t.me/solanaethmint">Телеграм</a></div>
+    </footer>
+</body>
+</html>
