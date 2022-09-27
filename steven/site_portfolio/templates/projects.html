@@ -24,7 +24,11 @@
     <main> 
         <div class="contacts">
             <h1>Проекты разработанные мной или с моим участием</h1>
-
+            {% autoescape off %}
+            {{ project_name }}
+            {{ project_description }}
+            {{ project_image }}
+            {% endautoescape %}
 
         </div>
     </main>
