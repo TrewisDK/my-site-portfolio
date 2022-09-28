@@ -1,15 +1,18 @@
-<!DOCTYPE html>
-{% load static %}
+<!DOCTYPE html> {% load static %}
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
-    <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script> 
+    <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="{% static 'js/script.js' %}"></script>
     <title>Степан Башаров - программист.</title>
 </head>
+
 <body>
     <header>
         <ul class="menu-bar">
@@ -18,15 +21,14 @@
             <li><a href="{% url 'contacts' %}">Связаться со мной</a></li>
         </ul>
     </header>
-    
+
     <menu class="main-menu"></menu>
-    <main> 
-        <h1 class="title">Hello, my dear client!</h1>
+    <main>
+        <h1 class="title" id="title">Hello, my dear client!</h1>
         <div class="about">
             <h2>Меня зовут Степан, и я программист из Питера.</h2>
             <b>Я занимаюсь программированием более 4х лет, и попробовал себя уже во множестве сфер.<br>
             Blockchain, web разработка, боты, парсеры, программы под Windows, Linux, MacOS - в разработке проектов каждого типа я принимал участие.</b>
-            <img src="{% static 'img/steven.jpg' %}" alt="Это я" width="100%" height="50%" class="my_photo">
             <div class="skills">
 
                 <div class="">
@@ -70,11 +72,45 @@
                         <div class="line-skill-scrap"></div>
                     </div>
                 </div>
+                <script>
+                    $(document).ready(function() {
+                        $("#line-skill-front-end").animate({
+                            width: "60%",
+                        }, 1300);
+                    }, );
+                    $(document).ready(function() {
+                        $(".line-skill-back-end").animate({
+                            width: "80%",
+                        }, 1500);
+                    }, );
+                    $(document).ready(function() {
+                        $(".line-skill-fullstack").animate({
+                            width: "70%",
+                        }, 2000);
+                    }, );
+                    $(document).ready(function() {
+                        $(".line-skill-bots").animate({
+                            width: "95%",
+                        }, 2500);
+                    }, );
+                    $(document).ready(function() {
+                        $(".line-skill-blockchain").animate({
+                            width: "40%",
+                        }, 3000);
+                    }, );
+                    $(document).ready(function() {
+                        $(".line-skill-scrap").animate({
+                            width: "90%",
+                        }, 3500);
+                    }, );
+                </script>
+
 
             </div>
-            
+            <img src="{% static 'img/steven.jpg' %}" id="stepa" alt="Это я" width="100%" height="50%" class="my_photo">
+
         </div>
-            
+
         </div>
     </main>
     <footer>
@@ -83,4 +119,5 @@
         <div class="link"> <a href="https://t.me/solanaethmint">Телеграм</a></div>
     </footer>
 </body>
+
 </html>
