@@ -4,7 +4,7 @@ from django.shortcuts import render
 import telepot
 from .models import Projects
 
-API_TOKEN=''
+API_TOKEN='5671596591:AAEoIh2NHhFfpxstwxczpMqp9E2bXdds8sA'
 
 bot = telepot.Bot(token=API_TOKEN)
  

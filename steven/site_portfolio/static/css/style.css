@@ -319,3 +319,14 @@ input {
     position: relative;
     z-index: 9999;
 }
+
+@media screen and (max-width: 1160px) {
+    .menu-bar {
+        display: flex;
+        flex-direction: column;
+    }
+    #stepa {
+        width: 150%;
+        height: 100%;
+    }
+}
